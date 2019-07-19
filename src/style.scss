@@ -1,0 +1,98 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0.5rem;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.post {
+  padding: 1rem 0;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+
+  &__title {
+    text-transform: capitalize;
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: flex-end;
+    button {
+      margin-left: 0.5rem;
+    }
+  }
+
+  &__editor-container {
+    background-color: #eee;
+    border: 1px solid royalblue;
+    border-radius: 3px;
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+
+    textarea {
+      width: 100%;
+      border: 1px solid #ccc;
+      font-size: 0.8rem;
+      border-radius: 3px;
+      margin-right: 0.5rem;
+      height: 120px;
+      outline: none;
+    }
+  }
+}
+
+.button {
+  border-width: 0;
+  padding: 5px 10px;
+  background-color: #ddd;
+  border-radius: 3px;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.5s ease;
+
+  &:hover {
+    background-color: #d6d6d6;
+  }
+  &:disabled {
+    cursor: not-allowed;
+    background-color: #ccc;
+    &:hover {
+      background-color: #ccc;
+    }
+  }
+
+  &--info {
+    background-color: dodgerblue;
+    color: white;
+    &:hover {
+      background-color: royalblue;
+    }
+  }
+
+  &--danger {
+    background-color: crimson;
+    color: white;
+    &:hover {
+      background-color: tomato;
+    }
+  }
+}
